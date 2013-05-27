@@ -1,0 +1,10 @@
+- verify_codes = VerifyCode.all
+
+= link_to 'new', '/verify_codes/new'
+- verify_codes.each do |verify_code|
+  .item
+    = verify_code.ip
+    = link_to '详情', "/verify_codes/#{verify_code.id}"
+    = link_to '编辑', "/verify_codes/#{verify_code.id}/edit"
+
+= link_to '登出', '/logout'
