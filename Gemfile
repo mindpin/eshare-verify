@@ -13,9 +13,13 @@ end
 
 gem 'jquery-rails', '2.2.1'
 #gem 'jquery-ui-rails', '4.0.2'
-#gem 'unicorn', '4.6.2'
+gem 'unicorn', '4.6.2'
 
 # 页面渲染
 gem 'haml', '4.0.0' # HAML模板语言
 
 gem 'simple_form', '2.0.2' # 用于简化表单创建
+
+gem 'mina',
+    :git => 'git://github.com/fushang318/mina.git',
+    :tag => 'v0.2.0fix'
