@@ -2,7 +2,7 @@ class VerifyCodesController < ApplicationController
   before_filter :admin_authenticate, :except=>[:login, :do_login]
   def admin_authenticate
     if session[:management] != 'admin'
-      redirect_to '/login'
+      redirect_to '/zhi_ma_kai_men/login'
     end
   end
 
