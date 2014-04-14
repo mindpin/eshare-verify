@@ -1,7 +1,6 @@
 class CheckController < ApplicationController
   def index
-    ip = request.remote_ip
-    if VerifyCode.is_verify?(params[:code], ip)
+    if VerifyCode.is_verify?(params[:code])
       render :status => 200, :text => 200
     else
       render :status => 411, :text => 411
