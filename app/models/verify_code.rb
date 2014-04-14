@@ -1,7 +1,7 @@
 class VerifyCode < ActiveRecord::Base
-  attr_accessible :code, :ip, :desc, :mac, :key
+  attr_accessible :code, :desc, :mac, :key
   attr_accessor :mac, :key
-  validates :code, :ip, :presence => true
+  validates :code, :presence => true
 
   before_validation :set_code
   def set_code
@@ -10,7 +10,7 @@ class VerifyCode < ActiveRecord::Base
     end
   end
 
-  def self.is_verify?(code, ip)
-    self.where(:code => code, :ip => ip).present?
+  def self.is_verify?(code)
+    self.where(:code => code).present?
   end
 end
