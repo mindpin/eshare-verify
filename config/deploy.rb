@@ -2,7 +2,7 @@ require 'mina/bundler'
 require 'mina/rails'
 require 'mina/git'
 
-set :domain, 'teamkn.mindpin.com'
+set :domain, 'eshare-verify.mindpin.com'
 set :deploy_to, '/web/2013/eshare-verify'
 set :current_path, 'current'
 set :repository, 'git://github.com/mindpin/eshare-verify.git'
@@ -11,7 +11,7 @@ set :user, 'root'
 
 set :shared_paths, [
   'config/database.yml',
-  'log', 
+  'log',
   'deploy/sh/property.yaml'
 ]
 
@@ -71,4 +71,3 @@ end
 #  - http://nadarei.co/mina/tasks
 #  - http://nadarei.co/mina/settings
 #  - http://nadarei.co/mina/helpers
-
