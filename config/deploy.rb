@@ -65,6 +65,14 @@ task :restart => :environment do
     ./deploy/sh/unicorn_eshare_verify.sh start
   ]
 end
+
+desc "update the current version to the server."
+task :update => :environment do
+  deploy do
+    invoke :'git:clone'
+    invoke :'deploy:link_shared_paths'
+  end
+end
 # For help in making your deploy script, see the Mina documentation:
 #
 #  - http://nadarei.co/mina
